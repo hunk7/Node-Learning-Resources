@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>                     
+  <meta charset="UTF-8">    
+  <title>Document</title>   <!-- <%=   %> ejs markup -->
+</head>
+<body>
+  <div class="refresh">
+    <h1>Dummy data : <%= data.userQuery %></h1>  
+    <% if(data.loggedIn){ %>
+        <h2> you are Logged in as : <%= data.username %></h2>
+    <% } %>  
+    <br>
+    <p>data 1</p>
+    <ul>
+      <% data.searchResults.forEach(result => { %>  
+        <li> <%= result  %> </li>
+     <% }); %>
+    </ul>
+  </div>
+</body>
+</html>

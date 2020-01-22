@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Node Learning</title>
+</head>
+<body>
+<form action="/" method="POST" id="form">
+    Email:<br>
+    <input type="Email" name="Email">
+    <br>
+    Password:<br>
+    <input type="Password" name="Password">
+    <br><br>
+    <input type="submit" value="Submit">
+</form>
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+<script>
+      $(document).ready(() => {
+          $('#form').submit((e) => {
+              e.preventDefault();
+              $.ajax({
+                  url : '/',
+                  type : 'post',
+                  contentType : 'application/json',
+                  data : JSON.stringify($('#form').serializeArray()),
+                  success : (respose) => {
+                      console.log('successfully got respose');
+                      console.log(respose);
+                  }
+              })
+          })
+      })
+</script> 
+
+</body>
+</html>
