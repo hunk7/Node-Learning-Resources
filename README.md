@@ -1,6 +1,6 @@
 # Node - Learning Resources 
  Author : Ganesh Bhadra     
- License : MIT    
+ License : Free  
  Created for Learning & Practices  
  github.com/hunk7     
 
